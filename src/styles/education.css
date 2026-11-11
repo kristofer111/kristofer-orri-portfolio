@@ -1,0 +1,99 @@
+﻿.education-container {
+    border-radius: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 5rem;
+}
+
+.education-item:last-child {
+    margin-bottom: 0;
+}
+
+.education-marker {
+
+}
+
+.education-marker img {
+    width: 55px;
+    height: auto;
+    overflow: hidden;
+    opacity: .9;
+    margin-bottom: 1rem;
+}
+
+.education-marker .hr-logo {
+    width: 50px;
+    margin-bottom: 12px;
+}
+
+.itu {
+    margin-top: 16px;
+}
+
+.education-content {
+    .header {
+        display: flex;
+        justify-content: space-between;
+
+        .school {
+            font-size: 1.25rem;
+        }
+
+        .degree {
+            margin-top: .8rem;
+            font-size: var(--font-size-on-surface);
+        }
+
+        .emphasis {
+            font-size: var(--font-size-on-surface);
+        }
+
+    }
+
+    .dates {
+        margin-top: 1rem;
+        font-size: .7rem;
+        color: var(--text-darker);
+    }
+
+    .description-container {
+        margin-top: 1rem;
+    }
+
+    .description-container p {
+        margin-top: .6rem;
+        font-size: var(--font-size-on-surface);
+        color: var(--secondary-dark);
+        line-height: var(--line-height-on-surface);
+    }
+
+    details {
+        margin-top: 2rem;
+        color: #d2d2d2;
+    }
+
+}
+
+
+@media (max-width: 800px) {
+    .education-container {
+        border-radius: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,18 @@
+﻿---
+import "../styles/clock.css";
+---
+
+<div class="clock" aria-label="Current time in GMT">
+    <time id="clock-time">--:--:--</time>
+    <span class="clock-zone">GMT</span>
+</div>
+
+
+<script>
+    import {updateClock} from "../scripts/clock";
+
+    updateClock()
+    setInterval(updateClock, 1000);
+</script>
+
+

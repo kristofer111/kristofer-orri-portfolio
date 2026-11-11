@@ -1,0 +1,44 @@
+﻿
+.clock {
+    display: flex;
+    align-items: baseline;
+    gap: .3rem;
+    color: #e5e5e5;
+}
+
+.clock-icon {
+    width: 18px;
+    height: 18px;
+    color: #a0a0a0;
+}
+
+#clock-time {
+    font-family: monospace;
+    font-size: 1.1rem;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+}
+
+.clock-zone {
+    color: #999;
+    font-size: .65rem;
+    font-weight: 600;
+
+}
+
+@media (max-width: 440px) {
+    .clock {
+        margin-bottom: .5rem;
+    }
+
+    #clock-time {
+        font-size: .7rem;
+        letter-spacing: 0.05em;
+    }
+
+    .clock-zone {
+        font-size: .35rem;
+    }
+}
+
+

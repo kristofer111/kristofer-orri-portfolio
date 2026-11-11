@@ -1,0 +1,36 @@
+﻿footer {
+    border-top: solid 1px #333;
+    padding-top: 1.5rem;
+    height: 100px;
+}
+
+footer p {
+    font-size: 15px;
+    color: #a3a3a3; /* 72727a */
+    margin-bottom: .7rem;
+}
+
+.to-top-button {
+    display: flex;
+    column-gap: 5px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    color: #777777;
+    font-size: 11px;
+    text-transform: uppercase;
+    transition: 100ms;
+
+    .arrow-up-icon {
+        width: 10px;
+        height: auto;
+    }
+}
+
+.to-top-button:hover {
+    color: #bcec41;
+}
+
+.to-top-button:hover .arrow-up-icon {
+    color: #bcec41;
+}

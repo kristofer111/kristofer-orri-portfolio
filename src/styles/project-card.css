@@ -1,0 +1,151 @@
+﻿
+.project-card {
+    border-radius: 14px;
+    border: solid 1px #222;
+    background: #0e0e0e;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.project-image-container {
+    padding: 8px 8px 0 8px;
+}
+
+.project-image {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 8px;
+    object-fit: cover;
+    display: block;
+    opacity: 90%;
+}
+
+.text-content {
+    padding: 0 1rem 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.project-year {
+    color: #8b8b8b;
+    font-size: .9rem;
+}
+
+.project-title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.project-subtitle {
+    font-size: .79rem;
+    color: #7c7c7c;
+    margin-top: .2rem;
+}
+
+.project-description {
+    color: var(--secondary-dark);
+    margin: .9rem 0 1rem;
+    font-size: .85rem;
+    line-height: 1.3rem;
+}
+
+.tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+    margin-bottom: 1.5rem;
+}
+
+.tech-list span {
+    padding: .2rem .65rem;
+    border-radius: 5px;
+    font-size: .70rem;
+    border: 1px solid #333;
+    color: var(--secondary-dark);
+    font-family: "JetBrains Mono", serif;
+}
+
+
+.links {
+    display: flex;
+    column-gap: .7rem;
+
+}
+
+.project-link {
+    display: flex;
+    justify-items: center;
+    column-gap: .3rem;
+    margin-top: auto;
+    margin-bottom: auto;
+
+    position: relative;
+    transition: 150ms ease;
+}
+
+.project-link-text {
+    font-size: .75rem;
+    color: var(--link);
+}
+
+.project-link-icon {
+    width: 12px;
+    height: auto;
+    transition: 150ms ease;
+}
+
+.project-link:hover .project-link-icon {
+    transform: translate(2px, -2px);
+}
+
+.project-link:after {
+    content: '';
+    position: absolute;
+    background-color: var(--link);;
+    height: .5px;
+    width: 0;
+    left: 0;
+    bottom: .01rem;
+    transition: 200ms;
+}
+
+.project-link:hover:after {
+    width: 100%;
+}
+
+
+.github-link {
+    display: flex;
+}
+
+.github-link-icon {
+    width: 18px;
+    height: auto;
+    border: 1px solid #333;
+    border-radius: .5rem;
+    padding: .4rem;
+    cursor: pointer;
+    transition: 200ms;
+}
+
+.github-link-icon:hover {
+    background-color: #1f1f1f;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

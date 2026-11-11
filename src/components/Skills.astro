@@ -1,0 +1,42 @@
+﻿---
+import {skills} from "../data/skills.ts";
+import "../styles/skills.css"
+---
+
+<div class="skill-grid-container">
+    <h3>SKILLS</h3>
+
+    <nav class="skill-menu">
+        <button class="active" data-category="featured"><span>Featured</span></button>
+        <button data-category="all"><span>All</span></button>
+        <button data-category="languages"><span>Languages</span></button>
+        <button data-category="frameworks"><span>Frameworks</span></button>
+        <button data-category="AI/ML"><span>AI/ML</span></button>
+        <button data-category="devops"><span>DevOps</span></button>
+        <button data-category="api"><span>API</span></button>
+        <button data-category="mobile"><span>Mobile</span></button>
+        <button data-category="favorite"><span>Favorites</span></button>
+    </nav>
+
+    <div class="skill-list">
+        <div class="skill-grid">
+            {skills.map(skill => (
+                    <div
+                        class="skill-pill"
+                        data-category={skill.categories.join(" ")}
+                        style={`--skill-color: ${skill.color}`}
+                        hidden={!skill.categories.includes("featured")}
+                    >
+                        {skill.name}
+                    </div>
+            ))}
+        </div>
+    </div>
+
+</div>
+
+<script>
+    import {initSkillFilter} from "../scripts/about";
+
+    initSkillFilter();
+</script>

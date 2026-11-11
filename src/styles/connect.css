@@ -1,0 +1,125 @@
+﻿
+#connect {
+    margin-bottom: 18rem;
+}
+
+.connect-container {
+    display: grid;
+    grid-template-columns: repeat(3, max-content);
+    justify-content: space-between;
+    row-gap: 4rem;
+}
+
+.link-and-copy-container {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.connect-items-container .platform {
+    font-size: 1.1rem;
+    margin-bottom: .2rem;
+}
+
+.connect-items-container .link {
+    --highlight: #444;
+    color: #a3a3a3;
+    font-family: "JetBrains Mono", serif;
+    font-size: .85rem;
+
+
+    background-image: linear-gradient(var(--highlight), var(--highlight));
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-size: 100% 1px;
+
+    transition:
+            color 250ms ease,
+            background-size 300ms cubic-bezier(.2, .8, .2, 1);
+}
+
+.connect-items-container .link:hover {
+    --highlight: #e3e3e3;
+
+    color: #202020;
+    background-size: 100% 100%;
+}
+
+
+
+.copy-button {
+    position: relative;
+    width: 2.6rem;
+    height: 2.6rem;
+    display: grid;
+    place-items: center;
+    border: 1px solid transparent;
+    border-radius: .5rem;
+    padding: .8rem;
+    background: transparent;
+    cursor: pointer;
+    transition:
+            background-color 150ms ease,
+            border-color 150ms ease;
+}
+
+
+.copy-button.is-copied {
+    border-color: #333;
+}
+
+.copy-button:active {
+    transform: scale(.94);
+}
+
+.copy-button img {
+    width: 1rem;
+    height: auto;
+    transition:
+            opacity 180ms ease,
+            transform 250ms cubic-bezier(.2, .8, .2, 1);
+}
+
+.copy-button:hover {
+    background-color: #1f1f1f;
+}
+
+.copy-button.is-copied img {
+    opacity: 0;
+    transform: scale(.5) rotate(-20deg);
+}
+
+.copy-button::after {
+    content: "";
+    position: absolute;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: #c2f63f;
+    mask: url("/icons/check.svg") center / contain no-repeat;
+    -webkit-mask: url("/icons/check.svg") center / contain no-repeat;
+
+    opacity: 0;
+    transform: scale(.4) rotate(-25deg);
+    transition:
+            opacity 180ms ease,
+            transform 300ms cubic-bezier(.2, .8, .2, 1);
+}
+
+.copy-button.is-copied::after {
+    opacity: 1;
+    transform: scale(1) rotate(0);
+}
+
+@media (max-width: 1290px) {
+    .connect-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 740px) {
+    .connect-container {
+        grid-template-columns: 1fr
+    }
+}
+
+

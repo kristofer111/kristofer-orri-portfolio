@@ -1,0 +1,107 @@
+
+html {
+    scroll-behavior: smooth;
+    overflow-anchor: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root {
+    --background: #0a0a0a;
+    --text: #e0e0e0;
+    --text-darker: #a3a3a3;
+    --title: #f8f8f8;
+    --accent: #bcec41;
+    --accent-secondary: #dae7c7;
+    --link: #569cd6;
+
+    --font-geist: "Geist Sans", sans-serif;
+    --line-height-on-surface: 1.6rem;
+    --font-size-on-surface: .97rem;
+    --font-size-section-heading: 1.7rem;
+    --font-weight-section-heading: 500;
+    --letter-spcing-section-heading: .1rem;
+}
+
+body {
+    font-family: "Geist Sans", sans-serif;
+    background: var(--background);
+    color: var(--text);
+}
+
+.sidebar,
+main {
+    animation: page-fade-in 700ms ease-out both;
+}
+
+@keyframes page-fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(22px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.body::-webkit-scrollbar {
+    display: none;
+}
+
+button {
+    font-family: var(--font-geist), sans-serif;
+}
+
+section {
+    margin-top: 12rem;
+    scroll-margin-top: 4rem;
+}
+
+.section-reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 600ms ease, transform 600ms ease;
+}
+
+.section-reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.section-heading-row {
+    padding-bottom: 4rem;
+
+    .heading-with-accent {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    h2 {
+        font-size: var(--font-size-section-heading);
+        font-weight: var(--font-weight-section-heading);
+        letter-spacing: var(--letter-spcing-section-heading);
+        color: #cbcbcb;
+    }
+}
+
+@font-face {
+    font-family: "JetBrains Mono";
+    src: url("../../public/fonts/JetBrainsMono-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+

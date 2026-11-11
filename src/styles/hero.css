@@ -1,0 +1,239 @@
+
+#hero {
+    height: 42rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+}
+
+.hero-content {
+    display: flex;
+    gap: 4rem;
+}
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: .5rem;
+}
+
+h1 {
+    font-size: 3.6rem;
+    color: #f9fafb;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    color: var(--text-darker);
+}
+
+.hero-actions {
+    padding-top: 15px;
+    display: flex;
+    gap: .5rem;
+}
+
+.hero-button-row {
+    padding-top: .5rem;
+    display: flex;
+    gap: .8rem;
+}
+
+
+
+.hero-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.9rem;
+    border: 1px solid #333;
+    border-radius: .5rem;
+    padding: .65rem 1.1rem;
+    transition: 150ms;
+}
+
+.social-button:hover {
+    background-color: #212121;
+    border-color: #888888;
+}
+
+.hero-button img,
+.hero-button svg {
+    width: 18px;
+    height: auto;
+}
+
+.download-resume {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    font-size: .86rem;
+
+    background-color: #e5e5e5;
+    color: #0a0a0a;
+
+    transition:
+            background-color 250ms ease,
+            border-color 250ms ease,
+            box-shadow 300ms ease;
+}
+
+.download-resume:hover {
+    background-color: transparent;
+    border: 1px solid #333;
+    color: #dedede;
+}
+
+.download-resume:hover .download-icon {
+    color: #bcec41;
+}
+
+.hero-button > .download-icon {
+    width: 16px;
+    height: auto;
+    color: #141414;
+}
+
+
+.hero-image {
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image-glow-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    isolation: isolate;
+}
+
+.hero-image-glow-container::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+
+    width: 400px;
+    height: 75%;
+
+    background: rgba(255, 255, 255, 0.08);
+    filter: blur(75px);
+
+    border-radius: 40% 60% 35% 65%;
+    transform: rotate(-25deg);
+}
+
+.hero-image img {
+    width: 210px;
+    border-radius: 50%;
+    opacity: 95%;
+}
+
+
+
+
+@media (max-width: 1303px) {
+
+    .hero-content {
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+    }
+
+    .hero-text-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center
+    }
+
+    .hero-image-glow-container {
+        width: 400px;
+        height: 75%;
+    }
+
+    .hero-image-glow-container::before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+
+        width: 85%;
+        height: 75%;
+
+        background: rgba(255, 255, 255, 0.10);
+        filter: blur(50px);
+
+        border-radius: 40% 60% 35% 65%;
+        transform: rotate(-25deg);
+    }
+
+    .hero-button-row {
+        justify-content: center;
+    }
+
+}
+
+
+@media (max-width: 860px) {
+
+    h1 {
+        font-size: 2rem;
+        margin-bottom: .6rem;
+    }
+
+    .hero-text {
+        gap: 1rem;
+    }
+
+    .hero-text-container p {
+        font-size: 1rem;
+        width: 17rem;
+        text-align: center;
+        line-height: 1.3rem;
+    }
+
+    .hero-button-row {
+        width: 100%;
+        padding-top: .5rem;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: .8rem;
+        box-sizing: border-box;
+    }
+
+    .hero-button {
+        width: 100%;
+        justify-content: center;
+        box-sizing: border-box;
+    }
+
+    .download-resume {
+        grid-column: 1 / -1;
+        grid-row: 1;
+        order: -1;
+    }
+
+    .hero-image img {
+        width: 180px;
+        border-radius: 100%;
+    }
+}
+
+
+
+@media (max-width: 440px) {
+
+    h1 {
+        font-size: 1rem;
+        margin-bottom: .6rem;
+    }
+
+    .hero-text {
+        gap: 1rem;
+    }
+
+    .hero-text-container p {
+        font-size: .8rem;
+    }
+}
+

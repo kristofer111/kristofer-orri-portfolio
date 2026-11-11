@@ -1,0 +1,68 @@
+﻿---
+import "../styles/global.css"
+import "../styles/project-card.css"
+import type {Project} from "../data/projects.ts";
+
+interface Props {
+    project: Project
+}
+
+const { project } = Astro.props
+---
+
+<div class="project-card">
+
+    <div class="project-image-container">
+        <img
+            class="project-image"
+            src={project.image}
+            alt="Screenshot of the Any project"
+        >
+    </div>
+
+    <div class="text-content">
+        <div class="project-info">
+
+            <div class="project-text">
+
+                <div class="project-title-row">
+                    <h3>{project.title}</h3>
+                </div>
+
+                <p class="project-subtitle">{project.subtitle}</p>
+                <p class="project-description">{project.description}</p>
+
+                <div class="tech-list">
+                    {project.technologies.map(t => <span>{t}</span>)}
+                </div>
+
+            </div>
+        </div>
+        <div class="links">
+            {project.link &&
+                    <a class="project-link" href={project.link} target="_blank">
+                        <span class="project-link-text">{project.link}</span>
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                             width="24" height="24" viewBox="0 0 24 24"
+                             fill="none" stroke="#60a5fa"
+                             stroke-width="2" stroke-linecap="round"
+                             stroke-linejoin="round" class="project-link-icon">
+                            <path d="M7 7h10v10"></path>
+                            <path d="M7 17 17 7"></path>
+                        </svg>
+                    </a>
+            }
+            {project.github &&
+                    <a href={project.github} class="github-link" target="_blank">
+                        <img
+                            src="/icons/github-round.svg"
+                            class="github-link-icon"
+                            alt=""
+                        />
+                    </a>
+            }
+        </div>
+    </div>
+
+</div>
+

@@ -1,0 +1,20 @@
+---
+import "../styles/global.css"
+import "../styles/projects.css"
+import ProjectCard from "./ProjectCard.astro"
+import { projects } from "../data/projects"
+---
+
+<section id="projects">
+    <div class="container">
+        <div class="section-heading-row">
+            <div class="heading-with-accent">
+                <h2>Projects.</h2>
+            </div>
+        </div>
+
+        <div class="projects-grid">
+            {projects.map(p => <ProjectCard project={p}/>)}
+        </div>
+    </div>
+</section>
