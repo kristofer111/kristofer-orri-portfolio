@@ -12,8 +12,8 @@ export type Project = {
 export const projects: Project[] = [
     {
         title: "My Pages",
-        subtitle: "Self-service accounting solution",
-        description: "Admin portal for managing products, categories, users, orders & data related to Habitual Mobile Application.",
+        subtitle: "Accounting service portal",
+        description: "A self-service portal enabling accountants to view transaction history and invoices, and admins to manage users.",
         technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Shadcn", "Vitest", "Playwright"],
         github: "https://github.com/kristofer111/Dogler",
         link: "https://skemman.is/handle/1946/53550",
