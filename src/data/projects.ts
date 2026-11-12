@@ -15,7 +15,7 @@ export const projects: Project[] = [
         subtitle: "Accounting service portal",
         description: "A self-service portal enabling accountants to view transaction history and invoices, and admins to manage users.",
         technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Shadcn", "Vitest", "Playwright"],
-        github: "https://github.com/kristofer111/Dogler",
+        github: null,
         link: "https://skemman.is/handle/1946/53550",
         image: "/images/minar-sidur-landing-page-bottom.jpg"
     },
